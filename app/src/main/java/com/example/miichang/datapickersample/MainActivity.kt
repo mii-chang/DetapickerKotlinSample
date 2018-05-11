@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
         val dateDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
             textView.text = year.toString() + month.toString() + day.toString()
             Log.i("year", year.toString())
-            Log.i("month", month.toString())
+            Log.i("month", (month.toInt()+1).toString())
             Log.i("day", dayOfMonth.toString())
         }, year, month, day)
-        
+
 
         val button: Button = findViewById(R.id.button)
 
